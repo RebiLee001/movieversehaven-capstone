@@ -47,26 +47,6 @@ Restart your development server.
 
 ---
 
-📸 Screenshots (Hi-Fi Mockups)
-Desktop Version
-
----
-
-Mobile Version
-
-✅ Progress Report (Capstone Part 3)
- Initial setup (Repo, dependencies, README)
-
- Build Home Page with search bar
-
- Display search results
-
- Movie details page
-
- Responsive design
-
- Deployment
-
 👩‍💻 Author
 Rebi Edward Akpa
 Frontend Developer | Legal Practitioner | Tech Enthusiast
