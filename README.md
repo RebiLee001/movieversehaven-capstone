@@ -35,40 +35,22 @@ MovieVerseHaven/
 
 ---
 
-## ⚡ Getting Started
-
-### 1️⃣ Clone the Repo
-```bash
-git clone https://github.com/your-username/MovieVerseHaven.git
-cd MovieVerseHaven
-2️⃣ Install Dependencies
-bash
-Copy
-Edit
-npm install
-3️⃣ Run the Project
-bash
-Copy
-Edit
-npm start
-4️⃣ Build for Production
-bash
-Copy
-Edit
-npm run build
 🔑 API Key Setup
 Get your free OMDB API key from OMDB API
 
 Create a .env file in your root folder and add:
-
 ini
 Copy
 Edit
 REACT_APP_OMDB_API_KEY=your_api_key_here
 Restart your development server.
 
+---
+
 📸 Screenshots (Hi-Fi Mockups)
 Desktop Version
+
+---
 
 Mobile Version
 
