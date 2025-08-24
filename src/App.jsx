@@ -1,33 +1,24 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import MovieDetails from "./pages/MovieDetails";
 import Search from "./pages/Search";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Favorites from "./pages/Favorites";
+import MovieDetails from "./pages/MovieDetails";
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+      <div className="min-h-screen bg-gray-100">
         <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/movie/:id" element={<MovieDetails />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-          </Routes>
-        </main>
-        <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/movie/:id" element={<MovieDetails />} />
+        </Routes>
       </div>
     </Router>
   );
 }
 
 export default App;
-
