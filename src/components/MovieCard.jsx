@@ -1,16 +1,23 @@
-import { Link } from "react-router-dom";
+import React from "react";
 
-export default function MovieCard({ title, image, releaseDate, rating, id }) {
+export default function MovieCard({ movie }) {
   return (
-    <Link to={`/movie/${id}`}>
-      <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
-        <img src={image} alt={title} className="w-full h-80 object-cover" />
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-gray-100 truncate">{title}</h3>
-          <p className="text-gray-400 text-sm">Release: {releaseDate || "N/A"}</p>
-          <p className="text-yellow-400 font-bold">⭐ {rating ? rating.toFixed(1) : "N/A"}</p>
-        </div>
+    <div className="bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden w-60">
+      <img
+        src={
+          movie.poster_path
+            ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+            : "/no-poster.png" // fallback image in case TMDb has no poster
+        }
+        alt={movie.title}
+        className="w-full h-80 object-cover"
+      />
+      <div className="p-4">
+        <h3 className="text-lg font-semibold truncate">{movie.title}</h3>
+        <p className="text-sm text-gray-400">
+          {movie.release_date ? movie.release_date.slice(0, 4) : "N/A"}
+        </p>
       </div>
-    </Link>
+    </div>
   );
 }

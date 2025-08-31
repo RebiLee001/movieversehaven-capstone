@@ -1,23 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Search from "./pages/Search";
-import Favorites from "./pages/Favorites";
-import MovieDetails from "./pages/MovieDetails";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+import MovieDetail from "./pages/MovieDetail";
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-100">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/movie/:id" element={<MovieDetails />} />
-        </Routes>
-      </div>
-    </Router>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/movie/:id" element={<MovieDetail />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
