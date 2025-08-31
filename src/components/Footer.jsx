@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto text-center">
         <p className="mb-2">&copy; {new Date().getFullYear()} 🎬 MovieVerseHaven</p>
         <p className="text-sm text-gray-400">
-          Crafted with ❤️ using React + Tailwind CSS
+          Crafted with ❤️ By REBI EDWARD AKPA
         </p>
       </div>
     </footer>
